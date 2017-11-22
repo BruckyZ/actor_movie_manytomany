@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title></title>
+</head>
+<body>
+
+
+<nav th:fragment="thenavbar" class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#"> The movie dataabase </a>
+        </div>
+
+
+        <ul class="nav navbar-nav">
+
+            <li class="active"><a href="#"> Home </a></li>
+            <li><a th:href="@{/addmovie}"> Add a movie</a></li>
+            <li><a th:href="@{/addactor}"> Add a actor</a></li>
+            <li><a th:href="@{/about}"> About this project</a></li>
+
+
+        </ul>
+        </div>
+    </div>
+</nav>
+</body>
+</html>
