@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8"/>
+    <title> Add actors to movie</title>
+</head>
+<body>
+
+    <nav th:replace="fragments/base::thenavbar"><</nav>
+
+<div class="container">
+    <div class="col-md-12">
+
+        <h1 class="text-center"> Welcome to the movie database</h1>
+        <span><span class="h1">Movies</span>< class="h6"><a th:href="@{/addmovie}">
+            Add movie</a></span></span></span>
+
+<div class="col-md6 col-offset-2" th:each="aMovie:${movieList}">
+
+    <h3 th:text="${aMovie.title}">Movie title </h3><a th:if="${gotactors} gt 0 and ${gotactors} gt 0 and {gotactors}gt
+${#lists.size(aMovie.cast)}" th:href="@{/addactorstomovie/{id}"(id="${aMovie.id})}"> Add actors</a>
+    <div class="row">
+        <span th:each="anotherActor:${aMovie.cast}">
+
+            <div class="col-md-1"><img src th:src="${anotherActor.headshot}"/>
+                <p class="text-center" th:text="${anotherActor.name}"></div>
+        </span>
+    </div>
+</div>
+        <h2> Actor</h2>
+        <div th:each="anActor:${actorList}">
+            <div class="row">
+                <div class="col-md-2">
+                    <img th:src="${anActor.headshot}"/>
+                </div>
+                <div class="col-md-6">
+                    <p th:text="${anActor.name}"></p>
+                    <p th:inline="text">[[${anActor.name}]]'s real name is
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

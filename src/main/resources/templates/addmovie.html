@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head th:replace="fragments/base::headstuff"lang="en">
+    <meta charset="UTF-8"/>
+    <title>Add actors to com.example.actor_movie_manytomany.entities.Movie</title>
+</head>
+<body>
+
+    <div class="form-group">
+        <label>com.example.actor_movie_manytomany.entities.Movie title</label>
+
+        <input type="text" th:field="*{title}"  placeholder="Enter movie title">
+
+        </div>
+
+<div clas="form-group">
+    <label> Year of release</label>
+    <input type="number" th:field="*{year}" min="1878" max="2020" placeholder="Enter the year of release">
+</div>
+
+<div clas="form-group">
+    <label>Description</label>
+    <textarea th:field="*{description}" placeholder="Enter movie description">
+
+    </textarea>
+</div>
+
+<input type="Submit" value="Add com.example.actor_movie_manytomany.entities.Movie">
+</body>
+</html>
